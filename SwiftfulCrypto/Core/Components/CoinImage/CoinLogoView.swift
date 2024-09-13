@@ -8,11 +8,37 @@
 import SwiftUI
 
 struct CoinLogoView: View {
+    let coin: Coin
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            CoinImageView(coin: coin)
+                .frame(width: 50, height: 50)
+
+            Text(coin.symbol.uppercased())
+                .font(.headline)
+                .foregroundStyle(Color.theme.accent)
+                .lineLimit(1)
+                .minimumScaleFactor(0.5)
+            Text(coin.name)
+                .font(.caption)
+                .foregroundStyle(Color.theme.secondaryText)
+                .lineLimit(2)
+                .minimumScaleFactor(0.5)
+                .multilineTextAlignment(.center)
+        }
     }
 }
 
-#Preview {
-    CoinLogoView()
+struct CoinLogoView_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            CoinLogoView(coin: DeveloperPreview.instance.coin)
+                .previewLayout(.sizeThatFits)
+            
+            CoinLogoView(coin: DeveloperPreview.instance.coin)
+                .previewLayout(.sizeThatFits)
+                .preferredColorScheme(.dark)
+        }
+
+    }
 }
