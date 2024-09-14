@@ -19,7 +19,7 @@ struct SwiftfulCryptoApp: App {
 
     var body: some Scene {
         WindowGroup {
-            NavigationView {
+            NavigationStack {
                 HomeView()
                     .toolbar(.automatic, for: .navigationBar)
             }

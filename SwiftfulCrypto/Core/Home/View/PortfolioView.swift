@@ -34,6 +34,11 @@ struct PortfolioView: View {
                     trailingNavBarButton
                 }
             }
+            .onChange(of: vm.searchText, { _, newValue in
+                if newValue == "" {
+                    removeSelectedCoin()
+                }
+            })
         }
     }
 }
@@ -42,13 +47,13 @@ extension PortfolioView {
     private var coinLogoList: some View {
         ScrollView(.horizontal, showsIndicators: false, content:  {
             LazyHStack(spacing: 10) {
-                ForEach(vm.allCoins) { coin in
+                ForEach(vm.searchText.isEmpty ? vm.portfolioCoins : vm.allCoins) { coin in
                     CoinLogoView(coin: coin)
                         .frame(width: 75)
                         .padding(4)
                         .onTapGesture {
                             withAnimation(.easeIn) {
-                                selectedCoin = coin
+                                updateSelectedCoin(coin: coin)
                             }
                         }
                         .background (
@@ -60,6 +65,18 @@ extension PortfolioView {
             .frame(height: 120)
             .padding(.leading)
         })
+    }
+
+    private func updateSelectedCoin(coin: Coin) {
+        selectedCoin = coin
+        if let portifolioCoin = vm.portfolioCoins.first(where: {$0.id == coin.id}) {
+            if let amount = portifolioCoin.currentHoldings {
+                qtyText = "\(amount)"
+            } else {
+                qtyText = ""
+            }
+
+        }
     }
 
     private var portfolioInputSection: some View {
@@ -84,7 +101,7 @@ extension PortfolioView {
                 Text(getCurrentValue().asCurrencyWith2Decimals())
             }
         }
-        .animation(.none)
+        .animation(.none, value: 0)
         .padding()
         .font(.headline)
     }
@@ -116,8 +133,9 @@ extension PortfolioView {
     }
 
     private func saveButtonPressed() {
-        guard let coin = selectedCoin else { return }
-
+        guard let coin = selectedCoin,
+              let amount = Double(qtyText) else { return }
+        vm.updatePortfolio(coin: coin, amount: amount)
         withAnimation(.easeIn) {
             showCheckmark = true
             removeSelectedCoin()

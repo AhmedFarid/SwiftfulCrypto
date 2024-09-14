@@ -36,6 +36,13 @@
 		FA9418C72C93B4FB00CD7953 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9418C62C93B4FB00CD7953 /* PortfolioView.swift */; };
 		FA9418C92C93B7BB00CD7953 /* XMarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9418C82C93B7BB00CD7953 /* XMarkButton.swift */; };
 		FA9418CB2C93B9C900CD7953 /* CoinLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9418CA2C93B9C900CD7953 /* CoinLogoView.swift */; };
+		FAEB930C2C950F3500D1FE83 /* ProtfolioContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAEB930A2C950F3500D1FE83 /* ProtfolioContainer.xcdatamodeld */; };
+		FAEB930E2C951C8000D1FE83 /* PortfolioDataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB930D2C951C8000D1FE83 /* PortfolioDataServices.swift */; };
+		FAEB93102C95386700D1FE83 /* HapticManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB930F2C95386700D1FE83 /* HapticManger.swift */; };
+		FAEB93152C95BBD500D1FE83 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB93142C95BBD500D1FE83 /* DetailsView.swift */; };
+		FAEB93172C95C55C00D1FE83 /* CoinDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB93162C95C55C00D1FE83 /* CoinDetail.swift */; };
+		FAEB93192C95C5F700D1FE83 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB93182C95C5F700D1FE83 /* DetailsViewModel.swift */; };
+		FAEB931B2C95C64700D1FE83 /* CoinDetailsDataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB931A2C95C64700D1FE83 /* CoinDetailsDataServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +76,13 @@
 		FA9418C62C93B4FB00CD7953 /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
 		FA9418C82C93B7BB00CD7953 /* XMarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMarkButton.swift; sourceTree = "<group>"; };
 		FA9418CA2C93B9C900CD7953 /* CoinLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinLogoView.swift; sourceTree = "<group>"; };
+		FAEB930B2C950F3500D1FE83 /* ProtfolioContai.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProtfolioContai.xcdatamodel; sourceTree = "<group>"; };
+		FAEB930D2C951C8000D1FE83 /* PortfolioDataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDataServices.swift; sourceTree = "<group>"; };
+		FAEB930F2C95386700D1FE83 /* HapticManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManger.swift; sourceTree = "<group>"; };
+		FAEB93142C95BBD500D1FE83 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		FAEB93162C95C55C00D1FE83 /* CoinDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetail.swift; sourceTree = "<group>"; };
+		FAEB93182C95C5F700D1FE83 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		FAEB931A2C95C64700D1FE83 /* CoinDetailsDataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsDataServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +171,7 @@
 			children = (
 				FA9345562C90E0D700A816AA /* Components */,
 				FA9345512C90DF7E00A816AA /* Home */,
+				FAEB93112C95BB9900D1FE83 /* Details */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -207,6 +222,8 @@
 				FA93455C2C90EE1400A816AA /* Coin.swift */,
 				FA9418B12C9215F300CD7953 /* Statistic.swift */,
 				FA9418C02C93A47E00CD7953 /* MarketData.swift */,
+				FAEB93162C95C55C00D1FE83 /* CoinDetail.swift */,
+				FAEB930A2C950F3500D1FE83 /* ProtfolioContainer.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -215,8 +232,10 @@
 			isa = PBXGroup;
 			children = (
 				FA9345672C910F7300A816AA /* CoinDataService.swift */,
+				FAEB931A2C95C64700D1FE83 /* CoinDetailsDataServices.swift */,
 				FA9418A72C91CD0100CD7953 /* CoinImageServices.swift */,
 				FA9418C22C93A63F00CD7953 /* MarketDataServices.swift */,
+				FAEB930D2C951C8000D1FE83 /* PortfolioDataServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -226,8 +245,34 @@
 			children = (
 				FA93456A2C91174300A816AA /* NetworkingManger.swift */,
 				FA9418AB2C91DE3300CD7953 /* LocalFileManger.swift */,
+				FAEB930F2C95386700D1FE83 /* HapticManger.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FAEB93112C95BB9900D1FE83 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				FAEB93132C95BBB900D1FE83 /* ViewModel */,
+				FAEB93122C95BBB200D1FE83 /* View */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		FAEB93122C95BBB200D1FE83 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAEB93142C95BBD500D1FE83 /* DetailsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAEB93132C95BBB900D1FE83 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FAEB93182C95C5F700D1FE83 /* DetailsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,18 +345,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAEB93152C95BBD500D1FE83 /* DetailsView.swift in Sources */,
+				FAEB931B2C95C64700D1FE83 /* CoinDetailsDataServices.swift in Sources */,
 				FA9345682C910F7300A816AA /* CoinDataService.swift in Sources */,
 				FA93455F2C90F72500A816AA /* CoinRowView.swift in Sources */,
 				FA9418A82C91CD0100CD7953 /* CoinImageServices.swift in Sources */,
 				FA9418C92C93B7BB00CD7953 /* XMarkButton.swift in Sources */,
 				FA9345652C91049800A816AA /* HomeViewModel.swift in Sources */,
 				FA9345402C90D7A500A816AA /* ContentView.swift in Sources */,
+				FAEB93102C95386700D1FE83 /* HapticManger.swift in Sources */,
 				FA9418C32C93A63F00CD7953 /* MarketDataServices.swift in Sources */,
 				FA93456B2C91174300A816AA /* NetworkingManger.swift in Sources */,
 				FA9418C12C93A47E00CD7953 /* MarketData.swift in Sources */,
 				FA925FF62C91C44B00FF7E48 /* CoinImageView.swift in Sources */,
 				FA9418B52C92171500CD7953 /* StatisticView.swift in Sources */,
 				FA9345552C90DFA800A816AA /* HomeView.swift in Sources */,
+				FAEB930C2C950F3500D1FE83 /* ProtfolioContainer.xcdatamodeld in Sources */,
 				FA9418B02C91F66E00CD7953 /* UIApplication.swift in Sources */,
 				FA93453E2C90D7A500A816AA /* SwiftfulCryptoApp.swift in Sources */,
 				FA93455A2C90E69C00A816AA /* CircleButtonAnimationVIew.swift in Sources */,
@@ -323,10 +372,13 @@
 				FA93454F2C90DD3900A816AA /* Color.swift in Sources */,
 				FA9418AC2C91DE3300CD7953 /* LocalFileManger.swift in Sources */,
 				FA9345612C90F77800A816AA /* PreviewProvider.swift in Sources */,
+				FAEB93192C95C5F700D1FE83 /* DetailsViewModel.swift in Sources */,
 				FA9418C72C93B4FB00CD7953 /* PortfolioView.swift in Sources */,
 				FA9345632C90FA7000A816AA /* Double.swift in Sources */,
 				FA9418B22C9215F300CD7953 /* Statistic.swift in Sources */,
+				FAEB93172C95C55C00D1FE83 /* CoinDetail.swift in Sources */,
 				FA93455D2C90EE1400A816AA /* Coin.swift in Sources */,
+				FAEB930E2C951C8000D1FE83 /* PortfolioDataServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +592,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FAEB930A2C950F3500D1FE83 /* ProtfolioContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FAEB930B2C950F3500D1FE83 /* ProtfolioContai.xcdatamodel */,
+			);
+			currentVersion = FAEB930B2C950F3500D1FE83 /* ProtfolioContai.xcdatamodel */;
+			path = ProtfolioContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FA9345322C90D7A500A816AA /* Project object */;
 }
